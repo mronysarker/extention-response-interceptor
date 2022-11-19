@@ -4,11 +4,11 @@ function interceptData() {
     xhrOverrideScript.src = chrome.runtime.getURL('inject.js');
     (document.head || document.documentElement).appendChild(xhrOverrideScript);
     
-    // s.onload = function(){
+    // xhrOverrideScript.onload = function(){
     
-    //   var url=chrome.runtime.getURL("html/popup.html");
+    //   // var url=chrome.runtime.getURL("html/popup.html");
     
-    //   var evt=document.createEvent("injectEvent");
+    //   var evt = new CustomEvent("injectEvent");
     //   // evt.initCustomEvent("injectEvent", true, true, url);
     //   document.dispatchEvent(evt);
     // };
